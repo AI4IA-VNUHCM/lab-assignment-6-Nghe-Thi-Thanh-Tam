@@ -18,8 +18,8 @@ void Ex3(char *str){
 	int shortest=99, longest=1;
 	int indexl, indexs;
 	int count=0;
-	for (int i=0; i<n; i++) {
-		if (str[i]==' ') {
+	for (int i=0; i<=n; i++) {
+		if (str[i]==' ' || str[i]=='\0') {
 			if (count<shortest) {
 				indexs = i;
 				shortest = count;
@@ -33,7 +33,6 @@ void Ex3(char *str){
 		else count++;
 
 	}
-	printf("%d", indexl);
 	printf("Shortest word: ");
 	for (int i=indexs-shortest; i<=indexs-1; i++) 
 		printf("%c", str[i]);
