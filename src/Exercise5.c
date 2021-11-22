@@ -18,17 +18,17 @@ Ex:
 void Ex5(char *str){
 	//Your codes here
 	int n = strlen(str);
-	int check=1;
+	int check;
 	if (n%2!=0) printf("Invalid!");
 	else {
-	for (int i=0; i<n/2; i++) {
-		if (str[i] != str[n-i-1]) {
-			check =0;
-			break;
+		check=1;
+		for (int i=0; i<n/2; i++) {
+			if (str[i] == '{' && str[n-i-1] != '}') check = 0;
+			if (str[i] == '(' && str[n-i-1] != ')') check = 0;
+			if (str[i] == '[' && str[n-i-1] != ']') check = 0;
 		}
-		}
+		printf("%s", check? "Valid!" : "Invalid!");
 	}
-	printf("%s", check? "Valid!" : "Invalid!");
 }
 
 int main(int argc, char *argv[]) {
