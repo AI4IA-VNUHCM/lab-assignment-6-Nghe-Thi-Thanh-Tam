@@ -14,8 +14,32 @@ Ex:
 #include <string.h>
 
 void Ex3(char *str){
-	//Your codes here
-	
+	int n = strlen(str);
+	int shortest=99, longest=1;
+	int indexl, indexs;
+	int count=0;
+	for (int i=0; i<n; i++) {
+		if (str[i]==' ') {
+			if (count<shortest) {
+				indexs = i;
+				shortest = count;
+				}
+			if (count>longest) {
+				longest = count;
+				indexl = i;
+			}
+			count = 0;
+		}
+		else count++;
+
+	}
+	printf("%d", indexl);
+	printf("Shortest word: ");
+	for (int i=indexs-shortest; i<=indexs; i++) 
+		printf("%c", str[i]);
+	printf("\nLongest word: ");
+	for (int i=indexl-longest; i<=indexl; i++) 
+		printf("%c", str[i]);
 }
 
 int main(int argc, char *argv[]) {
