@@ -35,7 +35,7 @@ void readnum(int n, int x) {
 		case 8:
 			printf("eight");
 			break;
-		default:
+		case 9:
 			printf("nine");
 	}
 }
@@ -50,40 +50,6 @@ void Ex1(int n){
 		readnum(n, 100);
 		printf(" hundred ");
 		n = n - (n/100)*100;
-	}
-	if (n>=10 && n<=19) {
-		switch (n/10) {
-			case 10:
-				printf("ten");
-				break;
-			case 11:
-				printf("eleven");
-				break;
-			case 12:
-				printf("twelve");
-				break;
-			case 13:
-				printf("thirteen");
-				break;
-			case 14:
-				printf("fourteen");
-				break;
-			case 15:
-				printf("fifteen");
-				break;
-			case 16:
-				printf("sixteen");
-				break;
-			case 17:
-				printf("seventeen");
-				break;
-			case 18:
-				printf("eighteen");
-				break;
-			default:
-				printf("nineteen");
-		}
-		n = n - (n/10)*10;
 	}
 	if (n>=20) {
 		switch (n/10) {
@@ -103,6 +69,38 @@ void Ex1(int n){
 		n = n - (n/10)*10;
 	}
 	readnum(n, 1);
+	if (n>=10 && n<=19) 
+	switch (n) {
+		case 10:
+			printf("ten");
+			break;
+		case 11:
+			printf("eleven");
+			break;
+		case 12:
+			printf("twelve");
+			break;
+		case 13:
+			printf("thirteen");
+			break;
+		case 14:
+			printf("fourteen");
+			break;
+		case 15:
+			printf("fifteen");
+			break;
+		case 16:
+			printf("sixteen");
+			break;
+		case 17:
+			printf("seventeen");
+			break;
+		case 18:
+			printf("eighteen");
+			break;
+		default:
+			printf("nineteen");
+	}
 }
 
 int main(int argc, char *argv[]) {

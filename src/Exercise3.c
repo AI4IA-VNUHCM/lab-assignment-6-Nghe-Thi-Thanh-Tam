@@ -35,10 +35,10 @@ void Ex3(char *str){
 	}
 	printf("%d", indexl);
 	printf("Shortest word: ");
-	for (int i=indexs-shortest; i<=indexs; i++) 
+	for (int i=indexs-shortest; i<=indexs-1; i++) 
 		printf("%c", str[i]);
 	printf("\nLongest word: ");
-	for (int i=indexl-longest; i<=indexl; i++) 
+	for (int i=indexl-longest; i<=indexl-1; i++) 
 		printf("%c", str[i]);
 }
 
